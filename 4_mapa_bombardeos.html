@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e64a0c10014d34deaba08e1e1a0cbe73 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+     position: fixed;
+     bottom: 50px;
+     left: 50px;
+     width: 240px;
+     background-color: white;
+     border:2px solid grey;
+     z-index:9999;
+     font-size:14px;
+     padding: 10px;
+     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+     line-height: 1.5;">
+  <b>Toneladas de explosivos lanzadas</b><br>
+  <i style="background:darkred; width:12px; height:12px; display:inline-block; margin-right:6px;"></i> +300.000 t<br>
+  <i style="background:orangered; width:12px; height:12px; display:inline-block; margin-right:6px;"></i> 100.001–300.000 t<br>
+  <i style="background:orange; width:12px; height:12px; display:inline-block; margin-right:6px;"></i> 25.001–100.000 t<br>
+  <i style="background:lightgreen; width:12px; height:12px; display:inline-block; margin-right:6px;"></i> 5.001–25.000 t<br>
+  <i style="background:green; width:12px; height:12px; display:inline-block; margin-right:6px;"></i> 0–5.000 t
+</div>
+    
+            <div class="folium-map" id="map_e64a0c10014d34deaba08e1e1a0cbe73" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e64a0c10014d34deaba08e1e1a0cbe73 = L.map(
+                "map_e64a0c10014d34deaba08e1e1a0cbe73",
+                {
+                    center: [48.5, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f96467f9f036be71555ea4143272b92 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4f96467f9f036be71555ea4143272b92.addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+            var circle_marker_7b98fdb287bc8587d3a6b718ca842dda = L.circleMarker(
+                [-5.5479395, 154.6117082],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.000647846719466, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_533b781efb8183c8286f244863434a3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4b859dfc8887cc69abab03727fa0235a = $(`<div id="html_4b859dfc8887cc69abab03727fa0235a" style="width: 100.0%; height: 100.0%;"><b>"PAPUA NEW GUINEA, MANUS ISLAND"</b><br><b>Misiones:</b> 3<br><b>Toneladas:</b> 12</div>`)[0];
+                popup_533b781efb8183c8286f244863434a3b.setContent(html_4b859dfc8887cc69abab03727fa0235a);
+            
+        
+
+        circle_marker_7b98fdb287bc8587d3a6b718ca842dda.bindPopup(popup_533b781efb8183c8286f244863434a3b)
+        ;
+
+        
+    
+    
+            var circle_marker_4014cb01d1b8d8accd4a9e056e3c6a0f = L.circleMarker(
+                [41.000028, 19.9999619],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.04826458060023, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_66771cd662ccb59f515270c6c9751ea0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_97a7e4a6b55b0695bc8dce4216f69b2c = $(`<div id="html_97a7e4a6b55b0695bc8dce4216f69b2c" style="width: 100.0%; height: 100.0%;"><b>ALBANIA</b><br><b>Misiones:</b> 150<br><b>Toneladas:</b> 1,465</div>`)[0];
+                popup_66771cd662ccb59f515270c6c9751ea0.setContent(html_97a7e4a6b55b0695bc8dce4216f69b2c);
+            
+        
+
+        circle_marker_4014cb01d1b8d8accd4a9e056e3c6a0f.bindPopup(popup_66771cd662ccb59f515270c6c9751ea0)
+        ;
+
+        
+    
+    
+            var circle_marker_2809ab5326bde405ed5057c0b1ae100b = L.circleMarker(
+                [54.720935, -164.0408092],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.077093759616475, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_35e368f0badb70905e487e5cb77bd772 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_294b90ca57a80b7e1a4c3cc0e85602cd = $(`<div id="html_294b90ca57a80b7e1a4c3cc0e85602cd" style="width: 100.0%; height: 100.0%;"><b>ALEUTIAN ISLANDS</b><br><b>Misiones:</b> 239<br><b>Toneladas:</b> 1,029</div>`)[0];
+                popup_35e368f0badb70905e487e5cb77bd772.setContent(html_294b90ca57a80b7e1a4c3cc0e85602cd);
+            
+        
+
+        circle_marker_2809ab5326bde405ed5057c0b1ae100b.bindPopup(popup_35e368f0badb70905e487e5cb77bd772)
+        ;
+
+        
+    
+    
+            var circle_marker_cef03243505616d6af4f001e72301027 = L.circleMarker(
+                [28.0000272, 2.9999825],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.000323923359733, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_f66224b9b6afcb76fc3969c0a533bc62 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e453dd98e18be0536f7e50850282635 = $(`<div id="html_8e453dd98e18be0536f7e50850282635" style="width: 100.0%; height: 100.0%;"><b>ALGERIA</b><br><b>Misiones:</b> 2<br><b>Toneladas:</b> 18</div>`)[0];
+                popup_f66224b9b6afcb76fc3969c0a533bc62.setContent(html_8e453dd98e18be0536f7e50850282635);
+            
+        
+
+        circle_marker_cef03243505616d6af4f001e72301027.bindPopup(popup_f66224b9b6afcb76fc3969c0a533bc62)
+        ;
+
+        
+    
+    
+            var circle_marker_26fec2a6bde93dbff9f61983703c96f9 = L.circleMarker(
+                [12.6112387, 92.8316541],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.002267463518131, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_403fa0bf5e7a39e2a66c403ecbb18097 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_030cd743f586a6424cdeaf4f7a8443ad = $(`<div id="html_030cd743f586a6424cdeaf4f7a8443ad" style="width: 100.0%; height: 100.0%;"><b>ANDAMAN ISLANDS</b><br><b>Misiones:</b> 8<br><b>Toneladas:</b> 32</div>`)[0];
+                popup_403fa0bf5e7a39e2a66c403ecbb18097.setContent(html_030cd743f586a6424cdeaf4f7a8443ad);
+            
+        
+
+        circle_marker_26fec2a6bde93dbff9f61983703c96f9.bindPopup(popup_403fa0bf5e7a39e2a66c403ecbb18097)
+        ;
+
+        
+    
+    
+            var circle_marker_c0a8fa87037f833b7209dad4581823e6 = L.circleMarker(
+                [-24.7761086, 134.755],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.000971770079199, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_b12e62a5941941f35b16d4d75c8a89a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a20dca775a1d84e5f53b63be49a17de5 = $(`<div id="html_a20dca775a1d84e5f53b63be49a17de5" style="width: 100.0%; height: 100.0%;"><b>AUSTRALIA</b><br><b>Misiones:</b> 4<br><b>Toneladas:</b> 0</div>`)[0];
+                popup_b12e62a5941941f35b16d4d75c8a89a4.setContent(html_a20dca775a1d84e5f53b63be49a17de5);
+            
+        
+
+        circle_marker_c0a8fa87037f833b7209dad4581823e6.bindPopup(popup_b12e62a5941941f35b16d4d75c8a89a4)
+        ;
+
+        
+    
+    
+            var circle_marker_fbf18ba979540702ee8ef9c43179115e = L.circleMarker(
+                [47.59397, 14.12456],
+                {"bubblingMouseEvents": true, "color": "orangered", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orangered", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4184603922711885, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_2d79e36732933e7ad766edc81b77898f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b04afa42f509ada132c270d256da1de5 = $(`<div id="html_b04afa42f509ada132c270d256da1de5" style="width: 100.0%; height: 100.0%;"><b>AUSTRIA</b><br><b>Misiones:</b> 4380<br><b>Toneladas:</b> 149,460</div>`)[0];
+                popup_2d79e36732933e7ad766edc81b77898f.setContent(html_b04afa42f509ada132c270d256da1de5);
+            
+        
+
+        circle_marker_fbf18ba979540702ee8ef9c43179115e.bindPopup(popup_2d79e36732933e7ad766edc81b77898f)
+        ;
+
+        
+    
+    
+            var circle_marker_867ef9016d5ac1742118a7ebf537bee2 = L.circleMarker(
+                [-8.2271303, 115.1919203],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.005830620475195, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_8e7a19318c40839a388f094305a49352 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4351a8233507ce4eb28dda3a86b4aa84 = $(`<div id="html_4351a8233507ce4eb28dda3a86b4aa84" style="width: 100.0%; height: 100.0%;"><b>BALI</b><br><b>Misiones:</b> 19<br><b>Toneladas:</b> 35</div>`)[0];
+                popup_8e7a19318c40839a388f094305a49352.setContent(html_4351a8233507ce4eb28dda3a86b4aa84);
+            
+        
+
+        circle_marker_867ef9016d5ac1742118a7ebf537bee2.bindPopup(popup_8e7a19318c40839a388f094305a49352)
+        ;
+
+        
+    
+    
+            var circle_marker_18227c75ae08530035209ec9f06cdb16 = L.circleMarker(
+                [50.6402809, 4.6667145],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.695787376706671, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_3431fbaee7ad8fbb0f94e18966051371 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9eff3e3d89c9d9528d92c78252963ed3 = $(`<div id="html_9eff3e3d89c9d9528d92c78252963ed3" style="width: 100.0%; height: 100.0%;"><b>BELGIUM</b><br><b>Misiones:</b> 2149<br><b>Toneladas:</b> 53,405</div>`)[0];
+                popup_3431fbaee7ad8fbb0f94e18966051371.setContent(html_9eff3e3d89c9d9528d92c78252963ed3);
+            
+        
+
+        circle_marker_18227c75ae08530035209ec9f06cdb16.bindPopup(popup_3431fbaee7ad8fbb0f94e18966051371)
+        ;
+
+        
+    
+    
+            var circle_marker_5221501251b88d6c6e572b0c52a60f28 = L.circleMarker(
+                [1.4297828, 114.7410413],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.4528448569068555, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_72884a786e70a93876a88d8ed5551173 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_817977e5b5c52654dd85a8e67356b9f6 = $(`<div id="html_817977e5b5c52654dd85a8e67356b9f6" style="width: 100.0%; height: 100.0%;"><b>BORNEO</b><br><b>Misiones:</b> 1399<br><b>Toneladas:</b> 13,890</div>`)[0];
+                popup_72884a786e70a93876a88d8ed5551173.setContent(html_817977e5b5c52654dd85a8e67356b9f6);
+            
+        
+
+        circle_marker_5221501251b88d6c6e572b0c52a60f28.bindPopup(popup_72884a786e70a93876a88d8ed5551173)
+        ;
+
+        
+    
+    
+            var circle_marker_9c449912f1615d6c26773ba641f41c02 = L.circleMarker(
+                [49.8699135, 2.0432341],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.006478467194662, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_c4ada8cec66b2a0fe2a9ebaeb06bd92a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d96da5eabb5123d542a1ec703c7183d5 = $(`<div id="html_d96da5eabb5123d542a1ec703c7183d5" style="width: 100.0%; height: 100.0%;"><b>BOUGAINVILLE</b><br><b>Misiones:</b> 21<br><b>Toneladas:</b> 93</div>`)[0];
+                popup_c4ada8cec66b2a0fe2a9ebaeb06bd92a.setContent(html_d96da5eabb5123d542a1ec703c7183d5);
+            
+        
+
+        circle_marker_9c449912f1615d6c26773ba641f41c02.bindPopup(popup_c4ada8cec66b2a0fe2a9ebaeb06bd92a)
+        ;
+
+        
+    
+    
+            var circle_marker_8f5a1942cfcc860a8646589729af590e = L.circleMarker(
+                [42.6073975, 25.4856617],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.037899033088771, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_522ac642f7bc643bd3805ea500741fa2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9372a1f3ec2bf1ad06b9e4cb60d35de4 = $(`<div id="html_9372a1f3ec2bf1ad06b9e4cb60d35de4" style="width: 100.0%; height: 100.0%;"><b>BULGARIA</b><br><b>Misiones:</b> 118<br><b>Toneladas:</b> 6,664</div>`)[0];
+                popup_522ac642f7bc643bd3805ea500741fa2.setContent(html_9372a1f3ec2bf1ad06b9e4cb60d35de4);
+            
+        
+
+        circle_marker_8f5a1942cfcc860a8646589729af590e.bindPopup(popup_522ac642f7bc643bd3805ea500741fa2)
+        ;
+
+        
+    
+    
+            var circle_marker_7d9450913ab089feeed60c6d31757c3b = L.circleMarker(
+                [17.1750495, 95.9999652],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.674959104675834, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_1e2f3735cdf73d27d68a5c885c7867b0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50805e2b1b4c8cb2dec02e5c4b830022 = $(`<div id="html_50805e2b1b4c8cb2dec02e5c4b830022" style="width: 100.0%; height: 100.0%;"><b>BURMA</b><br><b>Misiones:</b> 8259<br><b>Toneladas:</b> 35,133</div>`)[0];
+                popup_1e2f3735cdf73d27d68a5c885c7867b0.setContent(html_50805e2b1b4c8cb2dec02e5c4b830022);
+            
+        
+
+        circle_marker_7d9450913ab089feeed60c6d31757c3b.bindPopup(popup_1e2f3735cdf73d27d68a5c885c7867b0)
+        ;
+
+        
+    
+    
+            var circle_marker_40c4f8e539d6a3138cf6538a430b4f4a = L.circleMarker(
+                [8.0, 147.0],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.333964983884813, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_20bedd62592ef0ceb5a62165325945fa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a8bc8143b4469c58e5d657587c859621 = $(`<div id="html_a8bc8143b4469c58e5d657587c859621" style="width: 100.0%; height: 100.0%;"><b>CAROLINE ISLANDS</b><br><b>Misiones:</b> 1032<br><b>Toneladas:</b> 9,699</div>`)[0];
+                popup_20bedd62592ef0ceb5a62165325945fa.setContent(html_a8bc8143b4469c58e5d657587c859621);
+            
+        
+
+        circle_marker_40c4f8e539d6a3138cf6538a430b4f4a.bindPopup(popup_20bedd62592ef0ceb5a62165325945fa)
+        ;
+
+        
+    
+    
+            var circle_marker_c1213ce40b568c15b2c6b362166b4bca = L.circleMarker(
+                [-1.9758004, 120.2948856],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.001894951654439, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_41c3819750e9acef24af72ccb585feee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98608b36fd105c1f7d97dc9d2f830d35 = $(`<div id="html_98608b36fd105c1f7d97dc9d2f830d35" style="width: 100.0%; height: 100.0%;"><b>CELEBES ISLANDS</b><br><b>Misiones:</b> 3094<br><b>Toneladas:</b> 19,466</div>`)[0];
+                popup_41c3819750e9acef24af72ccb585feee.setContent(html_98608b36fd105c1f7d97dc9d2f830d35);
+            
+        
+
+        circle_marker_c1213ce40b568c15b2c6b362166b4bca.bindPopup(popup_41c3819750e9acef24af72ccb585feee)
+        ;
+
+        
+    
+    
+            var circle_marker_380e48255dadc55b563917d35576f92a = L.circleMarker(
+                [35.000074, 104.999927],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.314804917156601, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_ec9651c6ab13efd8a4c351a449805568 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c280526c2ce6f64494f96d22a4b766df = $(`<div id="html_c280526c2ce6f64494f96d22a4b766df" style="width: 100.0%; height: 100.0%;"><b>CHINA</b><br><b>Misiones:</b> 4060<br><b>Toneladas:</b> 11,674</div>`)[0];
+                popup_ec9651c6ab13efd8a4c351a449805568.setContent(html_c280526c2ce6f64494f96d22a4b766df);
+            
+        
+
+        circle_marker_380e48255dadc55b563917d35576f92a.bindPopup(popup_ec9651c6ab13efd8a4c351a449805568)
+        ;
+
+        
+    
+    
+            var circle_marker_9ebfc88632d5fe629a4c1aa875e79f4f = L.circleMarker(
+                [38.0709306, 114.0504217],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.001943540158399, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_d2f4c0ce3a2c9b36e5ac6e609f467507 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd2ae4d5e40d4545e9713e4d0998996d = $(`<div id="html_fd2ae4d5e40d4545e9713e4d0998996d" style="width: 100.0%; height: 100.0%;"><b>CHINA MINING</b><br><b>Misiones:</b> 7<br><b>Toneladas:</b> 128</div>`)[0];
+                popup_d2f4c0ce3a2c9b36e5ac6e609f467507.setContent(html_fd2ae4d5e40d4545e9713e4d0998996d);
+            
+        
+
+        circle_marker_9ebfc88632d5fe629a4c1aa875e79f4f.bindPopup(popup_d2f4c0ce3a2c9b36e5ac6e609f467507)
+        ;
+
+        
+    
+    
+            var circle_marker_bba257b1ee8db2aeddceb3b657b8486a = L.circleMarker(
+                [41.073838, -80.6920881],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.009717700791993, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_f05981e6f976e7c12272ab5c1f175cd9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a342943c3a712dad80c3408a960dce7d = $(`<div id="html_a342943c3a712dad80c3408a960dce7d" style="width: 100.0%; height: 100.0%;"><b>CORAL SEA AREA</b><br><b>Misiones:</b> 31<br><b>Toneladas:</b> 283</div>`)[0];
+                popup_f05981e6f976e7c12272ab5c1f175cd9.setContent(html_a342943c3a712dad80c3408a960dce7d);
+            
+        
+
+        circle_marker_bba257b1ee8db2aeddceb3b657b8486a.bindPopup(popup_f05981e6f976e7c12272ab5c1f175cd9)
+        ;
+
+        
+    
+    
+            var circle_marker_40beecefb42f874d4323c10c5cf62a91 = L.circleMarker(
+                [42.188098, 9.0683139],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.000971770079199, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_6609947be8d92f225935fe3015187d9c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b494918ee95aa0c9dc45b09bbee5c190 = $(`<div id="html_b494918ee95aa0c9dc45b09bbee5c190" style="width: 100.0%; height: 100.0%;"><b>CORSICA</b><br><b>Misiones:</b> 4<br><b>Toneladas:</b> 34</div>`)[0];
+                popup_6609947be8d92f225935fe3015187d9c.setContent(html_b494918ee95aa0c9dc45b09bbee5c190);
+            
+        
+
+        circle_marker_40beecefb42f874d4323c10c5cf62a91.bindPopup(popup_6609947be8d92f225935fe3015187d9c)
+        ;
+
+        
+    
+    
+            var circle_marker_c33e0bd1356ed55e8cc8e4112694c32e = L.circleMarker(
+                [41.4445334, -87.6313829],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.041786113405569, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_77588bd226c64b0e9fc4b97e9bec6b6c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5dd21fc2f3681bc376ac44d49fb531c3 = $(`<div id="html_5dd21fc2f3681bc376ac44d49fb531c3" style="width: 100.0%; height: 100.0%;"><b>CRETE</b><br><b>Misiones:</b> 130<br><b>Toneladas:</b> 1,426</div>`)[0];
+                popup_77588bd226c64b0e9fc4b97e9bec6b6c.setContent(html_5dd21fc2f3681bc376ac44d49fb531c3);
+            
+        
+
+        circle_marker_c33e0bd1356ed55e8cc8e4112694c32e.bindPopup(popup_77588bd226c64b0e9fc4b97e9bec6b6c)
+        ;
+
+        
+    
+    
+            var circle_marker_6c75cc8e31fe193fb683289c70a9bf1b = L.circleMarker(
+                [34.9174159, 32.8899027],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.002591386877865, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_599ca45fd43aa558d1538ad9bf1b9b7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_766e70fdbcfb3c8b676f8e27130a3309 = $(`<div id="html_766e70fdbcfb3c8b676f8e27130a3309" style="width: 100.0%; height: 100.0%;"><b>CYPRUS</b><br><b>Misiones:</b> 9<br><b>Toneladas:</b> 10</div>`)[0];
+                popup_599ca45fd43aa558d1538ad9bf1b9b7d.setContent(html_766e70fdbcfb3c8b676f8e27130a3309);
+            
+        
+
+        circle_marker_6c75cc8e31fe193fb683289c70a9bf1b.bindPopup(popup_599ca45fd43aa558d1538ad9bf1b9b7d)
+        ;
+
+        
+    
+    
+            var circle_marker_03e821e4319d36a34be17f7c59923d88 = L.circleMarker(
+                [48.257918, 14.5007688],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.321979819574689, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_26dd16bb12c58720d3c312662fea2c05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_018862e0ba06f4311cdffb4838a61e69 = $(`<div id="html_018862e0ba06f4311cdffb4838a61e69" style="width: 100.0%; height: 100.0%;"><b>CZECHOSLOVAKIA</b><br><b>Misiones:</b> 995<br><b>Toneladas:</b> 41,318</div>`)[0];
+                popup_26dd16bb12c58720d3c312662fea2c05.setContent(html_018862e0ba06f4311cdffb4838a61e69);
+            
+        
+
+        circle_marker_03e821e4319d36a34be17f7c59923d88.bindPopup(popup_26dd16bb12c58720d3c312662fea2c05)
+        ;
+
+        
+    
+    
+            var circle_marker_847d8a4807f4e8d6b15a364f9ad9436c = L.circleMarker(
+                [55.670249, 10.3333283],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.021055018382651, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_d21760cfca20ab93ed106974b1d88c94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b8df896927e2b61bbea7ae6dcb6cdc6 = $(`<div id="html_2b8df896927e2b61bbea7ae6dcb6cdc6" style="width: 100.0%; height: 100.0%;"><b>DENMARK</b><br><b>Misiones:</b> 66<br><b>Toneladas:</b> 439</div>`)[0];
+                popup_d21760cfca20ab93ed106974b1d88c94.setContent(html_2b8df896927e2b61bbea7ae6dcb6cdc6);
+            
+        
+
+        circle_marker_847d8a4807f4e8d6b15a364f9ad9436c.bindPopup(popup_d21760cfca20ab93ed106974b1d88c94)
+        ;
+
+        
+    
+    
+            var circle_marker_2c2617b952b04fbfa17f7bc6df87975d = L.circleMarker(
+                [26.2540493, 29.2675469],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.031096642534377, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_68e1e84edce7bde91391df988cc34a85 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c00b6d006b3a85c59cd98a4e426c6f8f = $(`<div id="html_c00b6d006b3a85c59cd98a4e426c6f8f" style="width: 100.0%; height: 100.0%;"><b>EGYPT</b><br><b>Misiones:</b> 97<br><b>Toneladas:</b> 1,966</div>`)[0];
+                popup_68e1e84edce7bde91391df988cc34a85.setContent(html_c00b6d006b3a85c59cd98a4e426c6f8f);
+            
+        
+
+        circle_marker_2c2617b952b04fbfa17f7bc6df87975d.bindPopup(popup_68e1e84edce7bde91391df988cc34a85)
+        ;
+
+        
+    
+    
+            var circle_marker_5b601481d2d1627e74d941b79253e0cc = L.circleMarker(
+                [15.9500319, 37.9999668],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.007126313914128, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_4c4d58de15f90deaf523cb834b19634a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c8e2a945c36bd02b5a034cf67bb2dab = $(`<div id="html_0c8e2a945c36bd02b5a034cf67bb2dab" style="width: 100.0%; height: 100.0%;"><b>ERITREA</b><br><b>Misiones:</b> 23<br><b>Toneladas:</b> 11</div>`)[0];
+                popup_4c4d58de15f90deaf523cb834b19634a.setContent(html_0c8e2a945c36bd02b5a034cf67bb2dab);
+            
+        
+
+        circle_marker_5b601481d2d1627e74d941b79253e0cc.bindPopup(popup_4c4d58de15f90deaf523cb834b19634a)
+        ;
+
+        
+    
+    
+            var circle_marker_aee3f7501fcbfb3c484cc97537cf7417 = L.circleMarker(
+                [10.2116702, 38.6521203],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00842200735306, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_089ca18cddb07f64c046f5f3b2433e9e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a67396610ab89b7c8dc5f94580dfb6b2 = $(`<div id="html_a67396610ab89b7c8dc5f94580dfb6b2" style="width: 100.0%; height: 100.0%;"><b>ETHIOPIA</b><br><b>Misiones:</b> 27<br><b>Toneladas:</b> 12</div>`)[0];
+                popup_089ca18cddb07f64c046f5f3b2433e9e.setContent(html_a67396610ab89b7c8dc5f94580dfb6b2);
+            
+        
+
+        circle_marker_aee3f7501fcbfb3c484cc97537cf7417.bindPopup(popup_089ca18cddb07f64c046f5f3b2433e9e)
+        ;
+
+        
+    
+    
+            var circle_marker_85d899f23f79295bb05f6d01c3227e57 = L.circleMarker(
+                [-24.5955306, -60.4289718],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_4fa7363de587e238c4880cb798cfe08a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70fa52ec926256b1b403d79d7b19f92f = $(`<div id="html_70fa52ec926256b1b403d79d7b19f92f" style="width: 100.0%; height: 100.0%;"><b>FORMOSA</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 5</div>`)[0];
+                popup_4fa7363de587e238c4880cb798cfe08a.setContent(html_70fa52ec926256b1b403d79d7b19f92f);
+            
+        
+
+        circle_marker_85d899f23f79295bb05f6d01c3227e57.bindPopup(popup_4fa7363de587e238c4880cb798cfe08a)
+        ;
+
+        
+    
+    
+            var circle_marker_129ba98871a2e672fbf7122461a085bc = L.circleMarker(
+                [46.603354, 1.8883335],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.199196670067863, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_bbdb7377e5921d0d47f9854b37f57827 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91c7c2a6b69f178660119cfe40c3da0c = $(`<div id="html_91c7c2a6b69f178660119cfe40c3da0c" style="width: 100.0%; height: 100.0%;"><b>FRANCE</b><br><b>Misiones:</b> 22226<br><b>Toneladas:</b> 822,855</div>`)[0];
+                popup_bbdb7377e5921d0d47f9854b37f57827.setContent(html_91c7c2a6b69f178660119cfe40c3da0c);
+            
+        
+
+        circle_marker_129ba98871a2e672fbf7122461a085bc.bindPopup(popup_bbdb7377e5921d0d47f9854b37f57827)
+        ;
+
+        
+    
+    
+            var circle_marker_fd44765c1b4df6ed9284db8126ebce75 = L.circleMarker(
+                [51.1638175, 10.4478313],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_9d0481d8472be5635d9155ada8ce8350 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a63c76dfad936effb045220f4c9813c8 = $(`<div id="html_a63c76dfad936effb045220f4c9813c8" style="width: 100.0%; height: 100.0%;"><b>GERMANY</b><br><b>Misiones:</b> 61744<br><b>Toneladas:</b> 1,993,426</div>`)[0];
+                popup_9d0481d8472be5635d9155ada8ce8350.setContent(html_a63c76dfad936effb045220f4c9813c8);
+            
+        
+
+        circle_marker_fd44765c1b4df6ed9284db8126ebce75.bindPopup(popup_9d0481d8472be5635d9155ada8ce8350)
+        ;
+
+        
+    
+    
+            var circle_marker_1f8c1391c9f5b7956e4ba06474f19db8 = L.circleMarker(
+                [-1.2394556, 175.2969455],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011985164310124, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_a8e6817a272fe0e93b066760134e81fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d033ac83dd666fffb6f8fa89e15ba460 = $(`<div id="html_d033ac83dd666fffb6f8fa89e15ba460" style="width: 100.0%; height: 100.0%;"><b>GILBERT ISLANDS</b><br><b>Misiones:</b> 38<br><b>Toneladas:</b> 264</div>`)[0];
+                popup_a8e6817a272fe0e93b066760134e81fb.setContent(html_d033ac83dd666fffb6f8fa89e15ba460);
+            
+        
+
+        circle_marker_1f8c1391c9f5b7956e4ba06474f19db8.bindPopup(popup_a8e6817a272fe0e93b066760134e81fb)
+        ;
+
+        
+    
+    
+            var circle_marker_f0cf4ca969073690867270b771a3f5b8 = L.circleMarker(
+                [54.3151594, -1.9181532],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011013394230925, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_d39b9fc57aada554a1db857fc7f46f8b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f12385156eb7549d63a3364fd5e69b07 = $(`<div id="html_f12385156eb7549d63a3364fd5e69b07" style="width: 100.0%; height: 100.0%;"><b>GREAT BRITAIN</b><br><b>Misiones:</b> 35<br><b>Toneladas:</b> 576</div>`)[0];
+                popup_d39b9fc57aada554a1db857fc7f46f8b.setContent(html_f12385156eb7549d63a3364fd5e69b07);
+            
+        
+
+        circle_marker_f0cf4ca969073690867270b771a3f5b8.bindPopup(popup_d39b9fc57aada554a1db857fc7f46f8b)
+        ;
+
+        
+    
+    
+            var circle_marker_f9388b659ac3301528080906216e8e0e = L.circleMarker(
+                [38.9953683, 21.9877132],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2419707497206165, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_3d557e810ef98b44119520b0dff55380 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9f5390e0cba339d2fec01a317fd43ac3 = $(`<div id="html_9f5390e0cba339d2fec01a317fd43ac3" style="width: 100.0%; height: 100.0%;"><b>GREECE</b><br><b>Misiones:</b> 748<br><b>Toneladas:</b> 24,407</div>`)[0];
+                popup_3d557e810ef98b44119520b0dff55380.setContent(html_9f5390e0cba339d2fec01a317fd43ac3);
+            
+        
+
+        circle_marker_f9388b659ac3301528080906216e8e0e.bindPopup(popup_3d557e810ef98b44119520b0dff55380)
+        ;
+
+        
+    
+    
+            var circle_marker_38aea1e4ead611f719219368229e6867 = L.circleMarker(
+                [51.9846145, 4.4499142],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.152843237290057, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_6aa1abacccf2413c3f6423438bf920ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16b95350c23fa14eac6ff9b39eee16aa = $(`<div id="html_16b95350c23fa14eac6ff9b39eee16aa" style="width: 100.0%; height: 100.0%;"><b>HOLLAND OR NETHERLANDS</b><br><b>Misiones:</b> 3560<br><b>Toneladas:</b> 50,767</div>`)[0];
+                popup_6aa1abacccf2413c3f6423438bf920ef.setContent(html_16b95350c23fa14eac6ff9b39eee16aa);
+            
+        
+
+        circle_marker_38aea1e4ead611f719219368229e6867.bindPopup(popup_6aa1abacccf2413c3f6423438bf920ef)
+        ;
+
+        
+    
+    
+            var circle_marker_c4ac4dd3e7a15e731a342fd3fd8283b9 = L.circleMarker(
+                [47.1817585, 19.5060937],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.282785093046985, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_7a351d89fde5ee6ac931b57e50f4b4bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4345f467f1492d20f06309d11809cbcf = $(`<div id="html_4345f467f1492d20f06309d11809cbcf" style="width: 100.0%; height: 100.0%;"><b>HUNGARY</b><br><b>Misiones:</b> 874<br><b>Toneladas:</b> 39,194</div>`)[0];
+                popup_7a351d89fde5ee6ac931b57e50f4b4bb.setContent(html_4345f467f1492d20f06309d11809cbcf);
+            
+        
+
+        circle_marker_c4ac4dd3e7a15e731a342fd3fd8283b9.bindPopup(popup_7a351d89fde5ee6ac931b57e50f4b4bb)
+        ;
+
+        
+    
+    
+            var circle_marker_597554fa77993ec275f687657c2526f6 = L.circleMarker(
+                [22.3511148, 78.6677428],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.014900474547722, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_5ff21c51b22a0cfe31de96fc47bc3e41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_378474ceca736ab8e52ea87519b8f8c8 = $(`<div id="html_378474ceca736ab8e52ea87519b8f8c8" style="width: 100.0%; height: 100.0%;"><b>INDIA</b><br><b>Misiones:</b> 47<br><b>Toneladas:</b> 176</div>`)[0];
+                popup_5ff21c51b22a0cfe31de96fc47bc3e41.setContent(html_378474ceca736ab8e52ea87519b8f8c8);
+            
+        
+
+        circle_marker_597554fa77993ec275f687657c2526f6.bindPopup(popup_5ff21c51b22a0cfe31de96fc47bc3e41)
+        ;
+
+        
+    
+    
+            var circle_marker_82a0076d70dc95bf450610f8ae699b05 = L.circleMarker(
+                [-9.9999999, 69.9999999],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_f2a947978577647b19ece0574a3508bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4691b7199ae6679ac21bfb287bdf3e22 = $(`<div id="html_4691b7199ae6679ac21bfb287bdf3e22" style="width: 100.0%; height: 100.0%;"><b>INDIAN OCEAN</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 2</div>`)[0];
+                popup_f2a947978577647b19ece0574a3508bf.setContent(html_4691b7199ae6679ac21bfb287bdf3e22);
+            
+        
+
+        circle_marker_82a0076d70dc95bf450610f8ae699b05.bindPopup(popup_f2a947978577647b19ece0574a3508bf)
+        ;
+
+        
+    
+    
+            var circle_marker_77e773f84ca43760aec1c0581096fe81 = L.circleMarker(
+                [-2.4833826, 117.8902853],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.008745930712793, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_eb94a57cf6cfe6bca7fec9544648421a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c28927d53719bf9f9bef7129ae1181c7 = $(`<div id="html_c28927d53719bf9f9bef7129ae1181c7" style="width: 100.0%; height: 100.0%;"><b>INDONESIA</b><br><b>Misiones:</b> 28<br><b>Toneladas:</b> 106</div>`)[0];
+                popup_eb94a57cf6cfe6bca7fec9544648421a.setContent(html_c28927d53719bf9f9bef7129ae1181c7);
+            
+        
+
+        circle_marker_77e773f84ca43760aec1c0581096fe81.bindPopup(popup_eb94a57cf6cfe6bca7fec9544648421a)
+        ;
+
+        
+    
+    
+            var circle_marker_42303d6b9f95a5fcaac07362264e5973 = L.circleMarker(
+                [33.0955793, 44.1749775],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.020083248303451, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_ab074567c7ee8f58a17572b9937ccaf9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07ce8ee8190fc7b1c1c722dcc0a83fbf = $(`<div id="html_07ce8ee8190fc7b1c1c722dcc0a83fbf" style="width: 100.0%; height: 100.0%;"><b>IRAQ</b><br><b>Misiones:</b> 63<br><b>Toneladas:</b> 185</div>`)[0];
+                popup_ab074567c7ee8f58a17572b9937ccaf9.setContent(html_07ce8ee8190fc7b1c1c722dcc0a83fbf);
+            
+        
+
+        circle_marker_42303d6b9f95a5fcaac07362264e5973.bindPopup(popup_ab074567c7ee8f58a17572b9937ccaf9)
+        ;
+
+        
+    
+    
+            var circle_marker_a910cb4708c9dc55e70fcc8799aa225e = L.circleMarker(
+                [42.6384261, 12.674297],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.67309654535737, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_2f30fa181e7ee58fecca2c47bb4a900e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79f9147d75c16f32c8f059cc5e30591b = $(`<div id="html_79f9147d75c16f32c8f059cc5e30591b" style="width: 100.0%; height: 100.0%;"><b>ITALY</b><br><b>Misiones:</b> 23689<br><b>Toneladas:</b> 417,004</div>`)[0];
+                popup_2f30fa181e7ee58fecca2c47bb4a900e.setContent(html_79f9147d75c16f32c8f059cc5e30591b);
+            
+        
+
+        circle_marker_a910cb4708c9dc55e70fcc8799aa225e.bindPopup(popup_2f30fa181e7ee58fecca2c47bb4a900e)
+        ;
+
+        
+    
+    
+            var circle_marker_28ca0e79028efe1687b7857ce727ea63 = L.circleMarker(
+                [36.5748441, 139.2394179],
+                {"bubblingMouseEvents": true, "color": "orangered", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orangered", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.889817469186791, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_98ddb4908e2586ff6bbdf47fd7090e05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_255e54767ed8059092290553fc288450 = $(`<div id="html_255e54767ed8059092290553fc288450" style="width: 100.0%; height: 100.0%;"><b>JAPAN</b><br><b>Misiones:</b> 2748<br><b>Toneladas:</b> 183,762</div>`)[0];
+                popup_98ddb4908e2586ff6bbdf47fd7090e05.setContent(html_255e54767ed8059092290553fc288450);
+            
+        
+
+        circle_marker_28ca0e79028efe1687b7857ce727ea63.bindPopup(popup_98ddb4908e2586ff6bbdf47fd7090e05)
+        ;
+
+        
+    
+    
+            var circle_marker_fc989b0c09848762f46836a142668a38 = L.circleMarker(
+                [39.3432381, 141.6825261],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.043405730204234, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_60f83a07eea766beabf3af6f5d852561 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd2520c564469f5a05be4d231287f08d = $(`<div id="html_bd2520c564469f5a05be4d231287f08d" style="width: 100.0%; height: 100.0%;"><b>JAPAN MINING</b><br><b>Misiones:</b> 135<br><b>Toneladas:</b> 3,807</div>`)[0];
+                popup_60f83a07eea766beabf3af6f5d852561.setContent(html_bd2520c564469f5a05be4d231287f08d);
+            
+        
+
+        circle_marker_fc989b0c09848762f46836a142668a38.bindPopup(popup_60f83a07eea766beabf3af6f5d852561)
+        ;
+
+        
+    
+    
+            var circle_marker_135447ff9958b2b3adbf95f7a3af15b2 = L.circleMarker(
+                [-6.7115076, 110.6337137],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.111753559107915, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_8845f24b4417cd5a1ef62c1147beea24 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98136cb934b5b19fcd59ccd8b83af41c = $(`<div id="html_98136cb934b5b19fcd59ccd8b83af41c" style="width: 100.0%; height: 100.0%;"><b>JAVA</b><br><b>Misiones:</b> 346<br><b>Toneladas:</b> 1,422</div>`)[0];
+                popup_8845f24b4417cd5a1ef62c1147beea24.setContent(html_98136cb934b5b19fcd59ccd8b83af41c);
+            
+        
+
+        circle_marker_135447ff9958b2b3adbf95f7a3af15b2.bindPopup(popup_8845f24b4417cd5a1ef62c1147beea24)
+        ;
+
+        
+    
+    
+            var circle_marker_0a93bd0cf75c5738b9d79c5f9f387194 = L.circleMarker(
+                [50.3840378, 155.8322143],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0566865879532905, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_1cacbb1468d4871b71ca10b4e3d14653 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fac8e48783c1dba1f64bddf95a52f68e = $(`<div id="html_fac8e48783c1dba1f64bddf95a52f68e" style="width: 100.0%; height: 100.0%;"><b>KURILE ISLANDS</b><br><b>Misiones:</b> 176<br><b>Toneladas:</b> 631</div>`)[0];
+                popup_1cacbb1468d4871b71ca10b4e3d14653.setContent(html_fac8e48783c1dba1f64bddf95a52f68e);
+            
+        
+
+        circle_marker_0a93bd0cf75c5738b9d79c5f9f387194.bindPopup(popup_1cacbb1468d4871b71ca10b4e3d14653)
+        ;
+
+        
+    
+    
+            var circle_marker_938296a295128be82f15adc041909255 = L.circleMarker(
+                [33.8750629, 35.843409],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.012309087669857, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_c57187953febdd01607b59994c12ec47 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_025663aa1b80b5e3195e9dd4629e606b = $(`<div id="html_025663aa1b80b5e3195e9dd4629e606b" style="width: 100.0%; height: 100.0%;"><b>LEBANON</b><br><b>Misiones:</b> 39<br><b>Toneladas:</b> 47</div>`)[0];
+                popup_c57187953febdd01607b59994c12ec47.setContent(html_025663aa1b80b5e3195e9dd4629e606b);
+            
+        
+
+        circle_marker_938296a295128be82f15adc041909255.bindPopup(popup_c57187953febdd01607b59994c12ec47)
+        ;
+
+        
+    
+    
+            var circle_marker_49e950fd99a973f5dd0203f8917bdbcb = L.circleMarker(
+                [26.8234472, 18.1236723],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.158722446269213, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_20079532c3c68cd80638696b6f603e91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6dc7046f4b245e65ba3f8d26bc98e109 = $(`<div id="html_6dc7046f4b245e65ba3f8d26bc98e109" style="width: 100.0%; height: 100.0%;"><b>LIBYA</b><br><b>Misiones:</b> 491<br><b>Toneladas:</b> 3,743</div>`)[0];
+                popup_20079532c3c68cd80638696b6f603e91.setContent(html_6dc7046f4b245e65ba3f8d26bc98e109);
+            
+        
+
+        circle_marker_49e950fd99a973f5dd0203f8917bdbcb.bindPopup(popup_20079532c3c68cd80638696b6f603e91)
+        ;
+
+        
+    
+    
+            var circle_marker_9356a3ec0d6a08fbabf9daca6dccbc02 = L.circleMarker(
+                [49.8158683, 6.1296751],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.014900474547722, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_fa54508de67bc0833f579badd9ce4bb9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dac7781865c098f029f7856a2975bbbc = $(`<div id="html_dac7781865c098f029f7856a2975bbbc" style="width: 100.0%; height: 100.0%;"><b>LUXEMBOURG</b><br><b>Misiones:</b> 47<br><b>Toneladas:</b> 1,275</div>`)[0];
+                popup_fa54508de67bc0833f579badd9ce4bb9.setContent(html_dac7781865c098f029f7856a2975bbbc);
+            
+        
+
+        circle_marker_9356a3ec0d6a08fbabf9daca6dccbc02.bindPopup(popup_fa54508de67bc0833f579badd9ce4bb9)
+        ;
+
+        
+    
+    
+            var circle_marker_091a1731a3970341ec1fab8a6b5f3536 = L.circleMarker(
+                [-18.9249604, 46.4416422],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.009393777432259, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_3df1ca0dad44d8140e06a30e98b528f6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_72b7629f9d98fd70b3fc17a9ad23104e = $(`<div id="html_72b7629f9d98fd70b3fc17a9ad23104e" style="width: 100.0%; height: 100.0%;"><b>MADAGASCAR</b><br><b>Misiones:</b> 30<br><b>Toneladas:</b> 4</div>`)[0];
+                popup_3df1ca0dad44d8140e06a30e98b528f6.setContent(html_72b7629f9d98fd70b3fc17a9ad23104e);
+            
+        
+
+        circle_marker_091a1731a3970341ec1fab8a6b5f3536.bindPopup(popup_3df1ca0dad44d8140e06a30e98b528f6)
+        ;
+
+        
+    
+    
+            var circle_marker_7517d3f51ed5c9ac59681172629c8a41 = L.circleMarker(
+                [3.1501425, 101.6954388],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.029153102375978, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_68a642bbd6e87a75bfe62fa7a2084e0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b5881dba4501ae18d93ed957e4cdb886 = $(`<div id="html_b5881dba4501ae18d93ed957e4cdb886" style="width: 100.0%; height: 100.0%;"><b>MALAY STATES</b><br><b>Misiones:</b> 91<br><b>Toneladas:</b> 1,099</div>`)[0];
+                popup_68a642bbd6e87a75bfe62fa7a2084e0f.setContent(html_b5881dba4501ae18d93ed957e4cdb886);
+            
+        
+
+        circle_marker_7517d3f51ed5c9ac59681172629c8a41.bindPopup(popup_68a642bbd6e87a75bfe62fa7a2084e0f)
+        ;
+
+        
+    
+    
+            var circle_marker_6974a2bfda65cfa8b7c031e180d87be7 = L.circleMarker(
+                [-9.2079909, -76.1651529],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.007774160633594, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_da2200ff190b7ee888c102903fe58e58 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b0f9b37a03d3372192229909ff2cfe26 = $(`<div id="html_b0f9b37a03d3372192229909ff2cfe26" style="width: 100.0%; height: 100.0%;"><b>MANCHURIA</b><br><b>Misiones:</b> 25<br><b>Toneladas:</b> 919</div>`)[0];
+                popup_da2200ff190b7ee888c102903fe58e58.setContent(html_b0f9b37a03d3372192229909ff2cfe26);
+            
+        
+
+        circle_marker_6974a2bfda65cfa8b7c031e180d87be7.bindPopup(popup_da2200ff190b7ee888c102903fe58e58)
+        ;
+
+        
+    
+    
+            var circle_marker_1844129397f5ed195dea514e72fb0b40 = L.circleMarker(
+                [27.2181096, -112.0708055],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0459971170820985, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_db3a4299042933a0570497fd457a52ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de32c47018d23115bfabc679dc6cdb95 = $(`<div id="html_de32c47018d23115bfabc679dc6cdb95" style="width: 100.0%; height: 100.0%;"><b>MARCUS ISLANDS</b><br><b>Misiones:</b> 143<br><b>Toneladas:</b> 636</div>`)[0];
+                popup_db3a4299042933a0570497fd457a52ff.setContent(html_de32c47018d23115bfabc679dc6cdb95);
+            
+        
+
+        circle_marker_1844129397f5ed195dea514e72fb0b40.bindPopup(popup_db3a4299042933a0570497fd457a52ff)
+        ;
+
+        
+    
+    
+            var circle_marker_8846fbbb7dfc434e5c67e7cb729ea58d = L.circleMarker(
+                [15.1753648, 145.7379338],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.115640639424712, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_10a1a3b23acad4b5711cd67899c6f85b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_451ab6d985f037989251b868bb2b23d0 = $(`<div id="html_451ab6d985f037989251b868bb2b23d0" style="width: 100.0%; height: 100.0%;"><b>MARIANAS ISLANDS</b><br><b>Misiones:</b> 358<br><b>Toneladas:</b> 1,507</div>`)[0];
+                popup_10a1a3b23acad4b5711cd67899c6f85b.setContent(html_451ab6d985f037989251b868bb2b23d0);
+            
+        
+
+        circle_marker_8846fbbb7dfc434e5c67e7cb729ea58d.bindPopup(popup_10a1a3b23acad4b5711cd67899c6f85b)
+        ;
+
+        
+    
+    
+            var circle_marker_3459862189478acc5ded0261b051379c = L.circleMarker(
+                [8.9995549, 168.0002575],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2312812788494245, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_816f69fe62cde83069193c8dd67e068c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e2110f37c20772c8fb10494108cb8629 = $(`<div id="html_e2110f37c20772c8fb10494108cb8629" style="width: 100.0%; height: 100.0%;"><b>MARSHALL ISLANDS</b><br><b>Misiones:</b> 715<br><b>Toneladas:</b> 5,055</div>`)[0];
+                popup_816f69fe62cde83069193c8dd67e068c.setContent(html_e2110f37c20772c8fb10494108cb8629);
+            
+        
+
+        circle_marker_3459862189478acc5ded0261b051379c.bindPopup(popup_816f69fe62cde83069193c8dd67e068c)
+        ;
+
+        
+    
+    
+            var circle_marker_2af945a22cc33887f97ddc76c5338b96 = L.circleMarker(
+                [28.3347722, -10.3713379],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_6560176e6a9dab140f22bbd5d3bfd7d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b34fd68f474a08d0970b9b99118fc9f1 = $(`<div id="html_b34fd68f474a08d0970b9b99118fc9f1" style="width: 100.0%; height: 100.0%;"><b>MOROCCO</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 18</div>`)[0];
+                popup_6560176e6a9dab140f22bbd5d3bfd7d1.setContent(html_b34fd68f474a08d0970b9b99118fc9f1);
+            
+        
+
+        circle_marker_2af945a22cc33887f97ddc76c5338b96.bindPopup(popup_6560176e6a9dab140f22bbd5d3bfd7d1)
+        ;
+
+        
+    
+    
+            var circle_marker_cb4334c6d251177f549d3b282062b6e3 = L.circleMarker(
+                [-27.4615098, 153.0184604],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_99814c5b45aa048f7456ee00a7d2c712 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d481ee3f85d168afbdb16e025b3830b0 = $(`<div id="html_d481ee3f85d168afbdb16e025b3830b0" style="width: 100.0%; height: 100.0%;"><b>NETHERLANDS EAST INDIES</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 3</div>`)[0];
+                popup_99814c5b45aa048f7456ee00a7d2c712.setContent(html_d481ee3f85d168afbdb16e025b3830b0);
+            
+        
+
+        circle_marker_cb4334c6d251177f549d3b282062b6e3.bindPopup(popup_99814c5b45aa048f7456ee00a7d2c712)
+        ;
+
+        
+    
+    
+            var circle_marker_ebfa00b962c7e0414f5032e3d20458a5 = L.circleMarker(
+                [-5.5226203, 142.0871194],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.336135270395024, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_572803edcbe82cdf151769c9f2da6155 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_719e78446791dc59f2b5832bce8d38a1 = $(`<div id="html_719e78446791dc59f2b5832bce8d38a1" style="width: 100.0%; height: 100.0%;"><b>NEW GUINEA</b><br><b>Misiones:</b> 7213<br><b>Toneladas:</b> 67,112</div>`)[0];
+                popup_572803edcbe82cdf151769c9f2da6155.setContent(html_719e78446791dc59f2b5832bce8d38a1);
+            
+        
+
+        circle_marker_ebfa00b962c7e0414f5032e3d20458a5.bindPopup(popup_572803edcbe82cdf151769c9f2da6155)
+        ;
+
+        
+    
+    
+            var circle_marker_bb0a3aa6fa7fc0ad0f746ca583061813 = L.circleMarker(
+                [-3.7021472, 152.4360021],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.08389615017087, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_1863e3c68a821e5096d3b11469d9eed4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7343a1eee8c957c6dc8fabb05f60561 = $(`<div id="html_c7343a1eee8c957c6dc8fabb05f60561" style="width: 100.0%; height: 100.0%;"><b>NEW IRELAND</b><br><b>Misiones:</b> 260<br><b>Toneladas:</b> 749</div>`)[0];
+                popup_1863e3c68a821e5096d3b11469d9eed4.setContent(html_c7343a1eee8c957c6dc8fabb05f60561);
+            
+        
+
+        circle_marker_bb0a3aa6fa7fc0ad0f746ca583061813.bindPopup(popup_1863e3c68a821e5096d3b11469d9eed4)
+        ;
+
+        
+    
+    
+            var circle_marker_ce925c8a07dec9e6b5efa8814bf82bbb = L.circleMarker(
+                [61.1529386, 8.7876653],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.050855967478094, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_cb1c5600856ae08db4a4e7a3e98313b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31bea9d028690da93be2591110f46bc5 = $(`<div id="html_31bea9d028690da93be2591110f46bc5" style="width: 100.0%; height: 100.0%;"><b>NORWAY</b><br><b>Misiones:</b> 158<br><b>Toneladas:</b> 7,246</div>`)[0];
+                popup_cb1c5600856ae08db4a4e7a3e98313b2.setContent(html_31bea9d028690da93be2591110f46bc5);
+            
+        
+
+        circle_marker_ce925c8a07dec9e6b5efa8814bf82bbb.bindPopup(popup_cb1c5600856ae08db4a4e7a3e98313b2)
+        ;
+
+        
+    
+    
+            var circle_marker_ee3e10b0126e1ce44f6825756a8b88db = L.circleMarker(
+                [7.53902, 134.5671064],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.191762628961988, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_58c7b5097fc500bcb3802cead6b59e9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_387ec12e1e00b424eef167f85019d088 = $(`<div id="html_387ec12e1e00b424eef167f85019d088" style="width: 100.0%; height: 100.0%;"><b>PALAU ISLANDS</b><br><b>Misiones:</b> 593<br><b>Toneladas:</b> 3,806</div>`)[0];
+                popup_58c7b5097fc500bcb3802cead6b59e9f.setContent(html_387ec12e1e00b424eef167f85019d088);
+            
+        
+
+        circle_marker_ee3e10b0126e1ce44f6825756a8b88db.bindPopup(popup_58c7b5097fc500bcb3802cead6b59e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_eba68b8175f632e9108325dfba89a934 = L.circleMarker(
+                [14.5761711, 120.9817715],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.649369159256921, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_eb2cad4c4987a0d710aae0e8747d0dc1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1176af556b10995e112eba6a82a4a874 = $(`<div id="html_1176af556b10995e112eba6a82a4a874" style="width: 100.0%; height: 100.0%;"><b>PHILIPPINE ISLANDS</b><br><b>Misiones:</b> 8180<br><b>Toneladas:</b> 62,681</div>`)[0];
+                popup_eb2cad4c4987a0d710aae0e8747d0dc1.setContent(html_1176af556b10995e112eba6a82a4a874);
+            
+        
+
+        circle_marker_eba68b8175f632e9108325dfba89a934.bindPopup(popup_eb2cad4c4987a0d710aae0e8747d0dc1)
+        ;
+
+        
+    
+    
+            var circle_marker_c974b8c5a7264b7f0ea4b28c3ded7666 = L.circleMarker(
+                [52.215933, 19.134422],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.057982281392222, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_bc871c7bb124189673a4d68906d8981b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d4f8d5ddd4f896b7d10388b1f599f26 = $(`<div id="html_6d4f8d5ddd4f896b7d10388b1f599f26" style="width: 100.0%; height: 100.0%;"><b>POLAND</b><br><b>Misiones:</b> 180<br><b>Toneladas:</b> 7,110</div>`)[0];
+                popup_bc871c7bb124189673a4d68906d8981b.setContent(html_6d4f8d5ddd4f896b7d10388b1f599f26);
+            
+        
+
+        circle_marker_c974b8c5a7264b7f0ea4b28c3ded7666.bindPopup(popup_bc871c7bb124189673a4d68906d8981b)
+        ;
+
+        
+    
+    
+            var circle_marker_90f63d0630bf298d5b64d5300d79abf6 = L.circleMarker(
+                [45.9852129, 24.6859225],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.255251607469672, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_0dd305a8bfdb77774fad19a7eef4155e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b2cca6d959271dea6a157a62eb2eee4 = $(`<div id="html_0b2cca6d959271dea6a157a62eb2eee4" style="width: 100.0%; height: 100.0%;"><b>ROMANIA</b><br><b>Misiones:</b> 789<br><b>Toneladas:</b> 43,216</div>`)[0];
+                popup_0dd305a8bfdb77774fad19a7eef4155e.setContent(html_0b2cca6d959271dea6a157a62eb2eee4);
+            
+        
+
+        circle_marker_90f63d0630bf298d5b64d5300d79abf6.bindPopup(popup_0dd305a8bfdb77774fad19a7eef4155e)
+        ;
+
+        
+    
+    
+            var circle_marker_10bcdaf54fcf59f65d9be549bbf3b36d = L.circleMarker(
+                [40.0912813, 9.0305773],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.037251186369305, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_eb5ba743a734db736c12411c60c74958 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_459bedd291f7f84dc58fa1efecbb2264 = $(`<div id="html_459bedd291f7f84dc58fa1efecbb2264" style="width: 100.0%; height: 100.0%;"><b>SARDINIA</b><br><b>Misiones:</b> 116<br><b>Toneladas:</b> 2,550</div>`)[0];
+                popup_eb5ba743a734db736c12411c60c74958.setContent(html_459bedd291f7f84dc58fa1efecbb2264);
+            
+        
+
+        circle_marker_10bcdaf54fcf59f65d9be549bbf3b36d.bindPopup(popup_eb5ba743a734db736c12411c60c74958)
+        ;
+
+        
+    
+    
+            var circle_marker_b49193838900792a740ae94812e956ba = L.circleMarker(
+                [37.587794, 14.155048],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.023970328620249, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_5de0bb2f3cf45d198b493c6d4b143165 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_69ef1779a43261006e4b8c763e2652cb = $(`<div id="html_69ef1779a43261006e4b8c763e2652cb" style="width: 100.0%; height: 100.0%;"><b>SICILY</b><br><b>Misiones:</b> 75<br><b>Toneladas:</b> 434</div>`)[0];
+                popup_5de0bb2f3cf45d198b493c6d4b143165.setContent(html_69ef1779a43261006e4b8c763e2652cb);
+            
+        
+
+        circle_marker_b49193838900792a740ae94812e956ba.bindPopup(popup_5de0bb2f3cf45d198b493c6d4b143165)
+        ;
+
+        
+    
+    
+            var circle_marker_8c85c07ecb6e4512dc98a5664a075c58 = L.circleMarker(
+                [-8.7053941, 159.1070694],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.546782631229451, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_f1871a0d92f6432ca38f1aaf745324e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c52474599b25df51bc9b5a4a0d4d89f2 = $(`<div id="html_c52474599b25df51bc9b5a4a0d4d89f2" style="width: 100.0%; height: 100.0%;"><b>SOLOMON ISLANDS</b><br><b>Misiones:</b> 1689<br><b>Toneladas:</b> 9,562</div>`)[0];
+                popup_f1871a0d92f6432ca38f1aaf745324e7.setContent(html_c52474599b25df51bc9b5a4a0d4d89f2);
+            
+        
+
+        circle_marker_8c85c07ecb6e4512dc98a5664a075c58.bindPopup(popup_f1871a0d92f6432ca38f1aaf745324e7)
+        ;
+
+        
+    
+    
+            var circle_marker_802ebe58e64db94a6b9dd26f88160616 = L.circleMarker(
+                [8.3676771, 49.083416],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.000323923359733, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_89cffc4ec9c28853fea84dddf3351b6d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78eff81bd5e225d5e891ad133fa8a7fa = $(`<div id="html_78eff81bd5e225d5e891ad133fa8a7fa" style="width: 100.0%; height: 100.0%;"><b>SOMALIA</b><br><b>Misiones:</b> 2<br><b>Toneladas:</b> 0</div>`)[0];
+                popup_89cffc4ec9c28853fea84dddf3351b6d.setContent(html_78eff81bd5e225d5e891ad133fa8a7fa);
+            
+        
+
+        circle_marker_802ebe58e64db94a6b9dd26f88160616.bindPopup(popup_89cffc4ec9c28853fea84dddf3351b6d)
+        ;
+
+        
+    
+    
+            var circle_marker_59de44e2bdd5aaa7a414042e95455992 = L.circleMarker(
+                [14.5844444, 29.4917691],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.001943540158399, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_f901ff88b4d0f20e25382aa5e682bd4b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_577eae487bd7bbc1156a1ec29eb47da9 = $(`<div id="html_577eae487bd7bbc1156a1ec29eb47da9" style="width: 100.0%; height: 100.0%;"><b>SUDAN</b><br><b>Misiones:</b> 7<br><b>Toneladas:</b> 4,775</div>`)[0];
+                popup_f901ff88b4d0f20e25382aa5e682bd4b.setContent(html_577eae487bd7bbc1156a1ec29eb47da9);
+            
+        
+
+        circle_marker_59de44e2bdd5aaa7a414042e95455992.bindPopup(popup_f901ff88b4d0f20e25382aa5e682bd4b)
+        ;
+
+        
+    
+    
+            var circle_marker_9fccb533aca611976f60e3f5fce2dc84 = L.circleMarker(
+                [-0.1432942, 101.6241024],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.029477025735711, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_415d80da5ae3ec735faac371b2d8f338 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d2bfc01d6bb1738f5526edf88ce57c89 = $(`<div id="html_d2bfc01d6bb1738f5526edf88ce57c89" style="width: 100.0%; height: 100.0%;"><b>SUMATRA</b><br><b>Misiones:</b> 92<br><b>Toneladas:</b> 469</div>`)[0];
+                popup_415d80da5ae3ec735faac371b2d8f338.setContent(html_d2bfc01d6bb1738f5526edf88ce57c89);
+            
+        
+
+        circle_marker_9fccb533aca611976f60e3f5fce2dc84.bindPopup(popup_415d80da5ae3ec735faac371b2d8f338)
+        ;
+
+        
+    
+    
+            var circle_marker_953d94869121568ad64bc776184d1602 = L.circleMarker(
+                [-3.7412722, 103.7582089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_d47d95452dae81c703babdc8eb4ea8ce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a534a23473620e43dd36764abbea7204 = $(`<div id="html_a534a23473620e43dd36764abbea7204" style="width: 100.0%; height: 100.0%;"><b>SUMATRA MINING</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 8</div>`)[0];
+                popup_d47d95452dae81c703babdc8eb4ea8ce.setContent(html_a534a23473620e43dd36764abbea7204);
+            
+        
+
+        circle_marker_953d94869121568ad64bc776184d1602.bindPopup(popup_d47d95452dae81c703babdc8eb4ea8ce)
+        ;
+
+        
+    
+    
+            var circle_marker_8527bc82a73608cd8eca38401ad93dbe = L.circleMarker(
+                [46.7985624, 8.2319736],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.005830620475195, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_d8da3419f04992811633d7a293a80f5f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7f58edce6e12692b53114e0abe1882e = $(`<div id="html_e7f58edce6e12692b53114e0abe1882e" style="width: 100.0%; height: 100.0%;"><b>SWITZERLAND</b><br><b>Misiones:</b> 19<br><b>Toneladas:</b> 247</div>`)[0];
+                popup_d8da3419f04992811633d7a293a80f5f.setContent(html_e7f58edce6e12692b53114e0abe1882e);
+            
+        
+
+        circle_marker_8527bc82a73608cd8eca38401ad93dbe.bindPopup(popup_d8da3419f04992811633d7a293a80f5f)
+        ;
+
+        
+    
+    
+            var circle_marker_b7f2ac0d425431c45a5e8f8f21dc07e0 = L.circleMarker(
+                [34.8147886, 38.4231781],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.034983722851173, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_ba33665fd42cc32fd404ef843f3ab2e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08c5252770dad633727474698e1d0578 = $(`<div id="html_08c5252770dad633727474698e1d0578" style="width: 100.0%; height: 100.0%;"><b>SYRIA</b><br><b>Misiones:</b> 109<br><b>Toneladas:</b> 97</div>`)[0];
+                popup_ba33665fd42cc32fd404ef843f3ab2e9.setContent(html_08c5252770dad633727474698e1d0578);
+            
+        
+
+        circle_marker_b7f2ac0d425431c45a5e8f8f21dc07e0.bindPopup(popup_ba33665fd42cc32fd404ef843f3ab2e9)
+        ;
+
+        
+    
+    
+            var circle_marker_923a158d09d625add7a758315dcba17b = L.circleMarker(
+                [-9.3460171, 124.6370774],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.034011952771974, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_1a69bdf533732e08e02ef0e4d78a47ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07b48718514f599c0b99c7762d753b0d = $(`<div id="html_07b48718514f599c0b99c7762d753b0d" style="width: 100.0%; height: 100.0%;"><b>TIMOR</b><br><b>Misiones:</b> 106<br><b>Toneladas:</b> 147</div>`)[0];
+                popup_1a69bdf533732e08e02ef0e4d78a47ac.setContent(html_07b48718514f599c0b99c7762d753b0d);
+            
+        
+
+        circle_marker_923a158d09d625add7a758315dcba17b.bindPopup(popup_1a69bdf533732e08e02ef0e4d78a47ac)
+        ;
+
+        
+    
+    
+            var circle_marker_8e7e6d72e2fb525f7e7220b3f6180362 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.640396482192314, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_1689a6ddb774cb0c13dfbb7898aa8749 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c344fe322228ff39f77a823a47c23e5 = $(`<div id="html_3c344fe322228ff39f77a823a47c23e5" style="width: 100.0%; height: 100.0%;"><b>TUNISIA</b><br><b>Misiones:</b> 1978<br><b>Toneladas:</b> 12,215</div>`)[0];
+                popup_1689a6ddb774cb0c13dfbb7898aa8749.setContent(html_3c344fe322228ff39f77a823a47c23e5);
+            
+        
+
+        circle_marker_8e7e6d72e2fb525f7e7220b3f6180362.bindPopup(popup_1689a6ddb774cb0c13dfbb7898aa8749)
+        ;
+
+        
+    
+    
+            var circle_marker_d3b0e443bca28cdb0ace4cfd8f7ff808 = L.circleMarker(
+                [39.294076, 35.2316631],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_7f2749fe95a69faeaae86ae484738374 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb34292fa70ec82a054ef4e15269a096 = $(`<div id="html_bb34292fa70ec82a054ef4e15269a096" style="width: 100.0%; height: 100.0%;"><b>TURKEY</b><br><b>Misiones:</b> 1<br><b>Toneladas:</b> 22</div>`)[0];
+                popup_7f2749fe95a69faeaae86ae484738374.setContent(html_bb34292fa70ec82a054ef4e15269a096);
+            
+        
+
+        circle_marker_d3b0e443bca28cdb0ace4cfd8f7ff808.bindPopup(popup_7f2749fe95a69faeaae86ae484738374)
+        ;
+
+        
+    
+    
+            var circle_marker_62e0ebc919a1107057a9e29bff8765d9 = L.circleMarker(
+                [26.492533, 92.3308789],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.005830620475195, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_0032cf7a7bd634acef52bcc894c2960c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_86fa0c774f42a06c00df2a91016ca7fb = $(`<div id="html_86fa0c774f42a06c00df2a91016ca7fb" style="width: 100.0%; height: 100.0%;"><b>UNKNOWN</b><br><b>Misiones:</b> 19<br><b>Toneladas:</b> 80</div>`)[0];
+                popup_0032cf7a7bd634acef52bcc894c2960c.setContent(html_86fa0c774f42a06c00df2a91016ca7fb);
+            
+        
+
+        circle_marker_62e0ebc919a1107057a9e29bff8765d9.bindPopup(popup_0032cf7a7bd634acef52bcc894c2960c)
+        ;
+
+        
+    
+    
+            var circle_marker_853e85d0dc858d2c493965dcbbeb89d9 = L.circleMarker(
+                [19.2969291, 166.6255924],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.022998558541049, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_6239f05a40234e8b71d333059256b3d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3bd0117bcbdacc94eea039d50e2edea = $(`<div id="html_d3bd0117bcbdacc94eea039d50e2edea" style="width: 100.0%; height: 100.0%;"><b>WAKE ISLAND</b><br><b>Misiones:</b> 72<br><b>Toneladas:</b> 632</div>`)[0];
+                popup_6239f05a40234e8b71d333059256b3d2.setContent(html_d3bd0117bcbdacc94eea039d50e2edea);
+            
+        
+
+        circle_marker_853e85d0dc858d2c493965dcbbeb89d9.bindPopup(popup_6239f05a40234e8b71d333059256b3d2)
+        ;
+
+        
+    
+    
+            var circle_marker_464858fcf22fae2cc9086f1db23222ae = L.circleMarker(
+                [23.0412366, -81.5261419],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.305459728228302, "stroke": true, "weight": 3}
+            ).addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+    
+        var popup_c4aa5c71e8d624f1dd39c24203513412 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7c0a1ee4235c65c3baf714dc62e416e0 = $(`<div id="html_7c0a1ee4235c65c3baf714dc62e416e0" style="width: 100.0%; height: 100.0%;"><b>YUGOSLAVIA</b><br><b>Misiones:</b> 944<br><b>Toneladas:</b> 36,443</div>`)[0];
+                popup_c4aa5c71e8d624f1dd39c24203513412.setContent(html_7c0a1ee4235c65c3baf714dc62e416e0);
+            
+        
+
+        circle_marker_464858fcf22fae2cc9086f1db23222ae.bindPopup(popup_c4aa5c71e8d624f1dd39c24203513412)
+        ;
+
+        
+    
+    
+            tile_layer_4f96467f9f036be71555ea4143272b92.addTo(map_e64a0c10014d34deaba08e1e1a0cbe73);
+        
+</script>
+</html>
